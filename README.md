@@ -36,8 +36,8 @@ Users should be able to:
 ![photo](./design/desktop-active-state.jpg)
 ### Links
 
-- Solution URL: (https://your-solution-url.com)
-- Live Site URL: (https://your-live-site-url.com)
+- Solution URL: (https://www.frontendmentor.io/solutions/faq-accordion-solution-mXvKp_JQe-)
+- Live Site URL: (https://singular-dolphin-e1549a.netlify.app/)
 
 ## My process
 
