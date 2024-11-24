@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --clr-dark-purple: hsl(292, 42%, 14%);
+
+    --clr-grayish-purple: hsl(292, 16%, 49%);
+    --clr-light-pink: hsl(275, 100%, 97%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    --ff-base: 'Work Sans', sans-serif;
+
+    --fw-bolder: 700;
+    --fw-bold: 600;
+    --fw-regular: 400;
+}
+
+/*
+  CSS RESET
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+/***********
+   main Css
+************/
+body {
+    --header-padding: 2rem 1rem;
+    --main-padding: 4rem 1rem 10rem;
+    --section-padding: 4rem 2rem;
+    --footer-padding: 8rem 1.5rem 3rem;
+    --margin: 4rem;
+
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+    font-size: 16px;
+    color: var(--clr-grayish-purple);
+    background-color: var(--clr-light-pink);
+}
+
+
+.cover {
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 65vw;
+    width: 100%;
+    position: relative;
+}
+
+.card {
+	position: absolute;
+	width: 90%;
+	border: none;
+        border-radius: 10px;
+	margin: 0px auto 20px auto;
+	padding: 20px;
+	top: 15%;
+	left: 5%;
+	right: 5%;
+	background-color: var(--clr-white);
+}
+
+.flexItem {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	color: var(--clr-dark-purple);
+	margin: 20px 0px;
+}
+
+.flexItem h1{
+	font-size: 1.5rem;
+}
+
+.flexItem h2{
+	font-size: 1rem;
+}
+
+.flexItem img{
+	width: 1.5rem;
+}
+
+.flexItem .plus{
+	margin-left: auto;
+}
+
+.question p {
+	display: none;
+	transition: display 0.3s;
+}
+
+@keyframes example
+{
+ from{transform : rotateX(0deg);}
+ to{transform : rotateX(180deg);}
+}
+
+
+.question:hover h2{
+	cursor: pointer;
+	color: var(--clr-grayish-purple);	
+}
+
+
+.question:hover p{
+	display: block;
+	
+}
+
+.question:hover img{
+	content: url("../assets/images/icon-minus.svg");
+	animation-duration : 2s;
+	animation-name : example;
+}
+
+hr {
+     border-color: var(--clr-light-pink);
+     margin: 20px 0px;
+}
+
+@media (min-width: 431px) {
+	.cover {
+    		background-image: url("../assets/images/background-pattern-desktop.svg");
+    		height: 30vh;
+	}
+
+	.card {
+		width: 40%;
+	}
+}
